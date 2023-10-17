@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Jon Barron</title>
+    <title>Chirantan Ganguly</title>
 
     <meta name="author" content="Chirantan Ganguly">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +22,64 @@
                 <p class="name" style="text-align: center;">
                   Chirantan Ganguly
                 </p>
-                <p>I am a first year Masters in Technology (MTech) student in Functional Materials and Devices at <a href="https://www.iitkgp.ac.in/index">IIT Kharagpur</a>.
+
+    <div class="center-text">
+        <p><strong>email:</strong> <span id="scrambledEmail"></span> <a href="#" id="unscrambleLink" onclick="unscrambleEmail(); return false;">unscramble :P</a></p>
+    </div>
+
+    <script>
+        var emailElement = document.getElementById("scrambledEmail");
+        var unscrambleLink = document.getElementById("unscrambleLink");
+        var email = "chirantanganguly01@gmail.com";
+        var shuffledEmail = email.split('').sort(() => 0.5 - Math.random()).join('');
+        var leftIndex = 0;
+        var rightIndex = email.length - 1;
+        var interval = 150; // Adjust the interval to control the speed of unscrambling
+
+        function scrambleEmail() {
+            emailElement.textContent = shuffledEmail;
+            unscrambleLink.style.display = "inline";
+        }
+
+        function unscrambleEmail() {
+            unscrambleLink.style.display = "none";
+
+            function revealCharacters() {
+                if (leftIndex <= rightIndex) {
+                    var leftChar = shuffledEmail[leftIndex];
+                    var rightChar = shuffledEmail[rightIndex];
+                    var targetLeftChar = email[leftIndex];
+                    var targetRightChar = email[rightIndex];
+
+                    if (leftChar !== targetLeftChar) {
+                        shuffledEmail = shuffledEmail.replaceAt(leftIndex, targetLeftChar);
+                    }
+
+                    if (rightChar !== targetRightChar) {
+                        shuffledEmail = shuffledEmail.replaceAt(rightIndex, targetRightChar);
+                    }
+
+                    emailElement.textContent = shuffledEmail;
+                    leftIndex++;
+                    rightIndex--;
+                    setTimeout(revealCharacters, interval);
+                }
+            }
+
+            revealCharacters();
+        }
+
+        // String method to replace a character at a specific index
+        String.prototype.replaceAt = function(index, replacement) {
+            return this.substr(0, index) + replacement + this.substr(index + 1);
+        }
+
+        scrambleEmail();
+    </script>
+                <p>I am a first year Masters in Technology (MTech) student at <a href="https://iitkgp.ac.in/">IIT Kharagpur</a>, specializing in <a href="https://erp.iitkgp.ac.in/ERPWebServices/curricula/CurriculaSubjectsList.jsp?stuType=PG&splCode=PH3">Functional Materials and Devices</a>. I have received my Bachelors in Technology (BTech) in Electronics and Communication Engineering in 2023 from the <a href="https://www.caluniv.ac.in/">University of Calcutta</a>.
                 </p>
                 <p>
-                  Prior to this, I have completed my Bachelors in Technology (BTech) in Electronics and Communication Engineering from the <a href="https://www.irpel.in">Institute of Radio Physics and Electronics</a>,  <a href="https://caluniv.ac.in">University of Calcutta</a>. I did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a> and funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. I've received the <a href="https://www2.eecs.berkeley.edu/Students/Awards/15/">C.V. Ramamoorthy Distinguished Research Award</a> and the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>.
+                  Over the years I have carried out some research activities under the supervision of excellent researchers. I was awarded Prior to At Google I've worked on <a href="https://www.google.com/glass/start/">Glass</a>,  <a href="https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a>, <a href="https://ai.googleblog.com/2014/10/hdr-low-light-and-high-dynamic-range.html">HDR+</a>, <a href="https://blog.google/products/google-ar-vr/introducing-next-generation-jump/">Jump</a>, <a href="https://ai.googleblog.com/2017/10/portrait-mode-on-pixel-2-and-pixel-2-xl.html">Portrait Mode</a>, <a href="https://ai.googleblog.com/2020/12/portrait-light-enhancing-portrait.html">Portrait Light</a>, and <a href="https://www.matthewtancik.com/nerf">NeRF</a>. I did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a> and funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. I've received the <a href="https://www2.eecs.berkeley.edu/Students/Awards/15/">C.V. Ramamoorthy Distinguished Research Award</a> and the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:jonbarron@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -37,7 +91,7 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/JonBarron_circle.jpg" class="hoverZoomLink"></a>
+                <a href="images/chirantan.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/chirantan_circular.png" class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
@@ -52,7 +106,104 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
+
+<tr onmouseout="difsurvey_stop()" onmouseover="difsurvey_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <div class="one">
+    <div class="two" id='difsurvey_image'><video  width=100% height=100% muted autoplay loop>
+    <source src="images/difsurvey_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video></div>
+      <img src='images/difsurvey_image.jpg' width="160">
+    </div>
+    <script type="text/javascript">
+      function difsurvey_start() {
+        document.getElementById('difsurvey_image').style.opacity = "1";
+      }
+
+      function difsurvey_stop() {
+        document.getElementById('difsurvey_image').style.opacity = "0";
+      }
+      difsurvey_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2310.07204">
+      <span class="papertitle">State of the Art on Diffusion Models for Visual Computing
+</span>
+    </a>
+    <br>
+	<a href="https://ryanpo.com/">Ryan Po</a>,
+	<a href="https://yifita.netlify.app/">Wang Yifan</a>,
+	<a href="https://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>,
+	<a href="https://kfiraberman.github.io/">Kfir Aberman</a>,
+	<strong>Jonathan T. Barron</strong>,
+	<a href="https://www.cs.tau.ac.il/~amberman/">Amit H. Bermano</a>,
+	<a href="https://ericryanchan.github.io/">Eric Ryan Chan</a>,
+	<a href="https://www.weizmann.ac.il/math/dekel/home">Tali Dekel</a>,
+	<a href="https://holynski.org/">Aleksander Holynski</a>,
+	<a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>,
+	<a href="https://tml.stanford.edu/">C. Karen Liu</a>,
+	<a href="https://lingjie0206.github.io/">Lingjie Liu</a>,
+	<a href="https://bmild.github.io/">Ben Mildenhall</a>,
+    <a href="https://www.niessnerlab.org/">Matthias Nießner</a>,
+	<a href="https://ommer-lab.com/people/ommer/">Björn Ommer</a>,
+	<a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a>,
+	<a href="https://peterwonka.net/">Peter Wonka</a>,
+    <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
+    <br>
+	<em>arXiv<em>, 2023
+    <br>
+    <p></p>
+    <p>
+    A survey of recent progress in diffusion models for images, videos, and 3D.
+    </p>
+  </td>
+</tr>          
+
+    <tr onmouseout="camp_stop()" onmouseover="camp_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='camp_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/camp.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/camp.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function camp_start() {
+            document.getElementById('camp_image').style.opacity = "1";
+          }
+
+          function camp_stop() {
+            document.getElementById('camp_image').style.opacity = "0";
+          }
+          camp_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://camp-nerf.github.io/">
+          <span class="papertitle">CamP: Camera Preconditioning for Neural Radiance Fields</span>
+        </a>
+        <br>
+        <a href="https://keunhong.com/">Keunhong Park</a>,
+        <a href="https://henzler.github.io/">Philipp Henzler</a>,
+        <a href="https://bmild.github.io/">Ben Mildenhall</a>,
+        <strong>Jonathan T. Barron</strong>,
+        <a href="http://www.ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>
+        <br>
+        <em>SIGGRAPH Asia</em>, 2023
+        <br>
+        <a href="https://camp-nerf.github.io/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2308.10902">arXiv</a>
+        <p></p>
+        <p>
+        Preconditioning based on camera parameterization helps NeRF and camera extrinsics/intrinsics optimize better together.
+        </p>
+      </td>
+    </tr>
+
     
       <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()"  bgcolor="#ffffd0">
         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -1057,7 +1208,7 @@
                 <a href="https://zollhoefer.com/">Michael Zollhoefer</a>,
                 <a href="https://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a>
                 <br>
-                <em>Arxiv</em>, 2021
+				<em>State of the Art Report at EUROGRAPHICS<em>, 2022
                 <br>
                 <p></p>
                 <p>
